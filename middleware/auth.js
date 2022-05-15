@@ -3,7 +3,6 @@ const utility = require('../utilities/utility');
 
 module.exports = async (req, res, next) => {
     let token = req.header('Auth-Token');
-    console.log('Token:' + token);
 
     try {
         if (!token) {
@@ -11,6 +10,8 @@ module.exports = async (req, res, next) => {
         }
     
         let verifiedToken = await security.verify(token);
+
+        console.log(verifiedToken);
     
         if (verifiedToken) {
             res.locals.id = verifiedToken._id;
