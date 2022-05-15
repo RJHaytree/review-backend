@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/f83ef20f-9463-4cb1-9940-13dcca88497b/resourceGroups/electro-review-rg/providers/Microsoft.Web/sites/electro-review-api-backend",
+    "appService.deploySubpath": "."
+}
