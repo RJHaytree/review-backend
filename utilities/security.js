@@ -27,7 +27,7 @@ sign = async (user) => {
 verify = async (token) => {
     let decodedToken = '';
 
-    jwt.verify(token, pconfig.get('secrets.token_secret'), (error, decoded) => {
+    jwt.verify(token, config.get('secrets.token_secret'), (error, decoded) => {
         decodedToken = decoded;
     });
 

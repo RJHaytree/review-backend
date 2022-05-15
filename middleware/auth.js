@@ -10,8 +10,6 @@ module.exports = async (req, res, next) => {
         }
     
         let verifiedToken = await security.verify(token);
-
-        console.log(verifiedToken);
     
         if (verifiedToken) {
             res.locals.id = verifiedToken._id;
