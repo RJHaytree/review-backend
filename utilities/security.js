@@ -2,6 +2,7 @@ const brycpt = require('bcrypt');
 const dotenv = require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const utility = require('./utility');
+const config = require('config');
 
 hash = async (password) => {
     let salt = await brycpt.genSalt(10);
@@ -20,13 +21,13 @@ sign = async (user) => {
         issued: new Date().toLocaleString()
     };
 
-    return jwt.sign(object, process.env.TOKEN_SECRET, { expiresIn: '1d'});
+    return jwt.sign(object, config.get('secrets.token_secret'), { expiresIn: '1d'});
 }
 
 verify = async (token) => {
     let decodedToken = '';
 
-    jwt.verify(token, process.env.TOKEN_SECRET, (error, decoded) => {
+    jwt.verify(token, pconfig.get('secrets.token_secret'), (error, decoded) => {
         decodedToken = decoded;
     });
 

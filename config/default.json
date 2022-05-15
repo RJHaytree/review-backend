@@ -1,0 +1,17 @@
+{
+    "general": {
+        "port": 8080
+    },
+    "database": {
+        "host": "bzfspck0uiifxysailcr-mysql.services.clever-cloud.com",
+        "port": 3306,
+        "uid":"upb9tl51elnii07v",
+        "pass":"srByrxk9PQOayrKch4t7",
+        "db_name": "bzfspck0uiifxysailcr",
+        "dialect": "mysql"
+    },
+    "secrets": {
+        "token_secret": "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY1MDM3MjYzMywiaWF0IjoxNjUwMzcyNjMzfQ.O7O6JrtJ_l7zDLSa7WHBmk2meeXb0vzpbzOw4ZcLoLY",
+        "session_secret":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+    }
+}

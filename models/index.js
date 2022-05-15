@@ -5,16 +5,16 @@ const Item = require('./item');
 const Review = require('./review');
 const Subscription = require('./subscription');
 const dotenv = require('dotenv').config();
+const config = require('config');
 
 const sequelize = new Sequelize(
-    process.env.DB_NAME,
-    process.env.DB_UID,
-    process.env.DB_PASS, {
-        host: process.env.DB_HOST,
-        dialect: 'mysql',
-        port: process.env.DB_PORT
-    }
-);
+    config.get('database.db_name'),
+    config.get('database.uid'),
+    config.get('database.pass'), {
+        host: config.get('database.host'),
+        dialect: config.get('database.dialect'),
+        port: config.get('database.port')
+    });
 
 sequelize.authenticate()
     .then(() => {
