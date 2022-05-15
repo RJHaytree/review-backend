@@ -14,7 +14,7 @@ chai.use(chaiHttp);
 chai.should();
 chai.expect();
 
-userTest.execute(server, chai, expect, should);
-itemTest.execute(server, chai, expect, should);
-reviewTest.execute(server, chai, expect, should);
-businessIntelTest.execute(server, chai, expect, should);
+//userTest.execute(server, chai, expect, should);
+//itemTest.execute(server, chai, expect, should);
+//reviewTest.execute(server, chai, expect, should);
+//businessIntelTest.execute(server, chai, expect, should);
