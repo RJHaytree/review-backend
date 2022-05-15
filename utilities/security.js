@@ -28,6 +28,7 @@ verify = async (token) => {
     let decodedToken = '';
 
     jwt.verify(token, config.get('secrets.token_secret'), (error, decoded) => {
+        console.log(error);
         decodedToken = decoded;
     });
 
